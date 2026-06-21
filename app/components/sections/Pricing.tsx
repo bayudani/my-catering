@@ -1,9 +1,16 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import { useNavigate } from "@tanstack/react-router";
 import { Button } from "~/components/ui/button";
 import { pricingPackages } from "~/data/pricing";
 
 export function Pricing() {
+  const navigate = useNavigate();
+
+  function handlePilihPaket(pkgName: string) {
+    sessionStorage.setItem("selectedPackage", pkgName);
+    navigate({ to: "/order" });
+  }
   return (
     <section id="pricing" className="section-spacing bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -115,6 +122,7 @@ export function Pricing() {
                     ? "bg-white text-primary-700 hover:bg-primary-50"
                     : ""
                 } ${pkg.custom ? "border-primary-600 text-primary-600 border-2 bg-transparent hover:bg-primary-50" : ""}`}
+                onClick={() => handlePilihPaket(pkg.name)}
               >
                 {pkg.custom ? "Hubungi Kami" : "Pilih Paket"}
               </Button>

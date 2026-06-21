@@ -14,7 +14,7 @@ const footerLinks = {
     { label: "Blog", href: "#" },
   ],
   contact: [
-    { label: "+62 812 3456 7890", href: "tel:+6281234567890" },
+    { label: "+62 831 1707 1327", href: "tel:+6283117071327" },
     { label: "hello@my-catering.com", href: "mailto:hello@my-catering.com" },
     { label: "Jakarta, Indonesia", href: "#" },
   ],
@@ -152,7 +152,7 @@ export function Footer() {
       <div className="border-t border-neutral-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <p className="text-center text-sm text-neutral-500">
-            &copy; {new Date().getFullYear()} My-Catering. All rights reserved.
+            &copy; {new Date().getFullYear()} My-Catering. All rights reserved. Powered by <a href="https://byvictech.site" target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:text-primary-300 transition-colors">byvictech.site</a>
           </p>
         </div>
       </div>
